@@ -13,7 +13,7 @@ Periodic Pull
 
 We first have to define the frecuency of the polling. Of course, the more frecuent the polling, the closer we get to real time, but it also increases the load on the server. We need to balance the frecuency and the server load, taking in consideration the latency between the client and the server.
 
-I'm initially supposing a 300ms latency ( which is average in my ISP ). So, the I'm initially setting the frecuency to 1000ms. Let's see how this evolves.
+I'm initially supposing a 300ms latency ( which is average in my ISP ). So, I'm initially setting the frecuency to 1000ms. Let's see how this evolves.
 
 For this method, the server will be exposing a simple REST service that return the messages after a given timestamp. The client will store the timestamp recieved by the server so we don't have clock issues, and use it to query the server. 
 
