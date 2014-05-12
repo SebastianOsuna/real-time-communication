@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Periodic Pull</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div>
+        <label>Who are you?</label>
+        <input type="text" id="author-name" />
+    </div>
+    <div>
+        <fieldset>
+            <legend>Send message</legend>
+            <div>
+                <textarea id="new-message"></textarea>
+                <button id="send-message">Send</button>
+            </div>
+        </fieldset>
+    </div>
+    <div>
+        <label>Last pull: </label><span id="last-pull"></span>
+    </div>
+    <div>
+        <ul class="message-stream" id="message-stream">
+        </ul>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

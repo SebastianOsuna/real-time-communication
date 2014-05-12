@@ -1,11 +1,11 @@
 class Message < ActiveRecord::Base
     def as_json(options)
         # don't render updated_at
-        super( :only => [:id, :content, :author_id, :author_name, :created_at] )
+        super( :only => [:id, :content, :author_id, :author_name], :methods => [:created] )
     end
 
-    def created_at
+    def created
         # get timestamp as millis
-        super().to_i
+        created_at.to_i
     end
 end

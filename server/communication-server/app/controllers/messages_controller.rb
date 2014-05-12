@@ -10,6 +10,7 @@ class MessagesController < ApplicationController
             # create message
             msg = Message.new content: params[:content], author_id: user.id, author_name: user.name
             if msg.save # message created
+                puts msg.to_json
                 render json: { status: 200, response: :OK }
             else # message not created
                 render json: { status: 500, response: :ERROR }, status: 500
@@ -26,6 +27,6 @@ class MessagesController < ApplicationController
         time =  params[:timestamp_init] || 0
         # get messages after timestamp
         messages = Message.where( "created_at > ?", DateTime.strptime( time.to_s, "%s" ) ).order( created_at: :desc )
-        render json: { messages:  messages }
+        render json: { messages:  messages, timestamp: DateTime.now.to_i }
     end
 end

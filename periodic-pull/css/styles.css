@@ -1,0 +1,50 @@
+div {
+    width: 500px;
+    margin: 0px auto;
+}
+
+fieldset {
+    border: 1px solid black;
+}
+
+#new-message {
+    min-width: 500px;
+    max-width: 500px;
+    height: 100px;
+    display: block;
+}
+
+ul {
+    padding: 0px;
+}
+
+#message-stream {
+    border: 1px dashed black;
+}
+
+#message-stream li {
+    display: block;
+}
+
+.message {
+    border: 1px dashed gray;
+}
+
+.message span {
+    display: block;
+}
+
+.message-content {
+    font-style: italic;
+}
+
+.message-date {
+    text-decoration: underline;
+    font-size: 12px;
+    text-align: right;
+}
+
+.message-author {
+    font-weight: bold;
+    text-align: right;
+}

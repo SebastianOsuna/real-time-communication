@@ -19,6 +19,12 @@ For this method, the server will be exposing a simple REST service that return t
 
 Of course, a messaging system isn't very helpful if we don't have some sort of identification for the clients (users), so the client will first request an ID from the server to identify itself.
 
+##### 11/May/2014:
+
+The client displays the messages posted on the server. If the user wants to send a message, the client first requests an identification from the server and then posts.
+
+At first, the 1000ms frecuency seems to be overkill. I'm getting ~30ms for response times in localhost with one client. When boosted to ~5 clients, response times get to ~300ms on certain requests. This are not final results as benchmarking will be done when I finish implementing all methods.
+
 Push / Long Polling Connections
 =========================
 
