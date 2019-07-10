@@ -1,1 +1,1 @@
-User.create(name: 'pepinyeah0')
+User.create(name: 'example')
